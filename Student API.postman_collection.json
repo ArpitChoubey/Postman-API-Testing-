@@ -1,0 +1,127 @@
+{
+  "info": {
+    "_postman_id": "71bc5937-3481-4c1f-8a96-c94d94582473",
+    "name": "Student API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "17227996",
+    "_collection_link": "https://go.postman.co/collection/17227996-71bc5937-3481-4c1f-8a96-c94d94582473?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Get Single Record",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/students/3",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "students",
+            "3"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Records",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/students",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "students"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create New Student",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": " {\r\n      \r\n      \"name\": \"Jay Verma\",\r\n      \"age\": 87,\r\n      \"course\": \"Information Technology\",\r\n      \"email\": \"Jay@example.com\"\r\n    }\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/students",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "students"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Record",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Jay Verma\",\r\n    \"age\": 87,\r\n    \"course\": \"Information Technology\",\r\n    \"email\": \"Jay@example.com\",\r\n    \"id\": \"8jWCwA-8kHs\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/students/8jWCwA-8kHs",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "students",
+            "8jWCwA-8kHs"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Record",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/students/2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "students",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

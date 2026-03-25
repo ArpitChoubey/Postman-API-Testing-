@@ -1,0 +1,149 @@
+{
+  "info": {
+    "_postman_id": "607edf75-858e-4df5-83f4-83364d1dcfb9",
+    "name": "My Collection1",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "17227996",
+    "_collection_link": "https://go.postman.co/collection/17227996-607edf75-858e-4df5-83f4-83364d1dcfb9?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "GetRequest",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.newzenler.com/api/v1/users?limit=&page=&orderby=&order=&search=&role[]=3&role[]=4",
+          "protocol": "https",
+          "host": [
+            "api",
+            "newzenler",
+            "com"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "users"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": ""
+            },
+            {
+              "key": "page",
+              "value": ""
+            },
+            {
+              "key": "orderby",
+              "value": ""
+            },
+            {
+              "key": "order",
+              "value": ""
+            },
+            {
+              "key": "search",
+              "value": ""
+            },
+            {
+              "key": "role[]",
+              "value": "3"
+            },
+            {
+              "key": "role[]",
+              "value": "4"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Post Request",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"response_code\":201,\"message\":\"People added successfully\",\"data\":{\"id\":\"313.5c109f1b58473\",\"first_name\":\"test\",\"last_name\":\"test\",\"email\":\"test123456@example.com\"}}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://api.newzenler.com/api/v1/users",
+          "protocol": "https",
+          "host": [
+            "api",
+            "newzenler",
+            "com"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Put Request",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"response_code\":200,\"message\":\"success\",\"data\":{\"message\":\"People updated successfully\"}}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://api.newzenler.com/api/v1/users/{user_id}",
+          "protocol": "https",
+          "host": [
+            "api",
+            "newzenler",
+            "com"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "users",
+            "{user_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Request",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "https://api.newzenler.com/api/v1/users/{user_id}",
+          "protocol": "https",
+          "host": [
+            "api",
+            "newzenler",
+            "com"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "users",
+            "{user_id}"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
