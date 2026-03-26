@@ -1,0 +1,406 @@
+{
+  "info": {
+    "_postman_id": "6b54497f-7b69-42ba-800d-f268b18488d2",
+    "name": "E-commerce API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "17227996",
+    "_collection_link": "https://go.postman.co/collection/17227996-6b54497f-7b69-42ba-800d-f268b18488d2?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Get Request",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "const jsonData = pm.response.json();\r",
+              "\r",
+              "// Status Code\r",
+              "pm.test(\"Status code is 201\", () => {\r",
+              "    pm.response.to.have.status(201);\r",
+              "});\r",
+              "\r",
+              "// Response Time\r",
+              "pm.test(\"Response time is below 2s\", () => {\r",
+              "    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+              "});\r",
+              "\r",
+              "// Data Type Validations\r",
+              "pm.test(\"User name is string\", () => {\r",
+              "    pm.expect(jsonData.name).to.be.a(\"string\");\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Courses is array\", () => {\r",
+              "    pm.expect(jsonData.courses).to.be.an(\"array\");\r",
+              "});\r",
+              "\r",
+              "// ID Auto Generated\r",
+              "pm.test(\"ID is generated\", () => {\r",
+              "    pm.expect(jsonData.id).to.exist;\r",
+              "});\r",
+              "\r",
+              "// Business Validation\r",
+              "pm.test(\"Courses array can be empty or valid\", () => {\r",
+              "    pm.expect(jsonData.courses.length).to.be.at.least(0);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://sparklecartonline.com/?wc-ajax=get_refreshed_fragments",
+          "protocol": "https",
+          "host": [
+            "sparklecartonline",
+            "com"
+          ],
+          "path": [
+            ""
+          ],
+          "query": [
+            {
+              "key": "wc-ajax",
+              "value": "get_refreshed_fragments"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Post Request",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "const jsonData = pm.response.json();\r",
+              "\r",
+              "// Status Code\r",
+              "pm.test(\"Status code is 201\", () => {\r",
+              "    pm.response.to.have.status(201);\r",
+              "});\r",
+              "\r",
+              "// Response Time\r",
+              "pm.test(\"Response time is below 2s\", () => {\r",
+              "    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+              "});\r",
+              "\r",
+              "// Data Type Validations\r",
+              "pm.test(\"User name is string\", () => {\r",
+              "    pm.expect(jsonData.name).to.be.a(\"string\");\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Courses is array\", () => {\r",
+              "    pm.expect(jsonData.courses).to.be.an(\"array\");\r",
+              "});\r",
+              "\r",
+              "// ID Auto Generated\r",
+              "pm.test(\"ID is generated\", () => {\r",
+              "    pm.expect(jsonData.id).to.exist;\r",
+              "});\r",
+              "\r",
+              "// Business Validation\r",
+              "pm.test(\"Courses array can be empty or valid\", () => {\r",
+              "    pm.expect(jsonData.courses.length).to.be.at.least(0);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "product_id",
+              "value": "123",
+              "type": "text",
+              "uuid": "ba8adec9-8ea8-4334-b723-14ee97e57594"
+            },
+            {
+              "key": "quantity",
+              "value": "1",
+              "type": "text",
+              "uuid": "574fede7-1975-493a-8025-14951c065cd5"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://sparklecartonline.com/?wc-ajax=add_to_cart",
+          "protocol": "https",
+          "host": [
+            "sparklecartonline",
+            "com"
+          ],
+          "path": [
+            ""
+          ],
+          "query": [
+            {
+              "key": "wc-ajax",
+              "value": "add_to_cart"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get resource",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3030/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3030",
+          "path": [
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All users",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "const jsonData = pm.response.json();\r",
+              "\r",
+              "// Status Code\r",
+              "pm.test(\"Status code is 201\", () => {\r",
+              "    pm.response.to.have.status(201);\r",
+              "});\r",
+              "\r",
+              "// Response Time\r",
+              "pm.test(\"Response time is below 2s\", () => {\r",
+              "    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+              "});\r",
+              "\r",
+              "// Data Type Validations\r",
+              "pm.test(\"User name is string\", () => {\r",
+              "    pm.expect(jsonData.name).to.be.a(\"string\");\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Courses is array\", () => {\r",
+              "    pm.expect(jsonData.courses).to.be.an(\"array\");\r",
+              "});\r",
+              "\r",
+              "// ID Auto Generated\r",
+              "pm.test(\"ID is generated\", () => {\r",
+              "    pm.expect(jsonData.id).to.exist;\r",
+              "});\r",
+              "\r",
+              "// Business Validation\r",
+              "pm.test(\"Courses array can be empty or valid\", () => {\r",
+              "    pm.expect(jsonData.courses.length).to.be.at.least(0);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3030/users",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3030",
+          "path": [
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Post Request",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "const jsonData = pm.response.json();\r",
+              "\r",
+              "// Test Suite\r",
+              "pm.test(\"Validate courses and product structure\", function () {\r",
+              "\r",
+              "    // Check courses is array\r",
+              "    pm.expect(jsonData.courses[0].products).to.be.an(\"array\");\r",
+              "\r",
+              "    // Check price is number\r",
+              "    pm.expect(jsonData.courses[0].products[0].price).to.be.a(\"number\");\r",
+              "\r",
+              "    // Check inStock is boolean\r",
+              "    pm.expect(jsonData.courses[0].products[0].inStock).to.be.a(\"boolean\");\r",
+              "\r",
+              "});\r",
+              "\r",
+              "\r",
+              "// Custom Logs (Visible in Postman Console)\r",
+              "console.log(\"Courses:\", jsonData.courses);\r",
+              "console.log(\"First Product:\", jsonData.courses[0].products[0]);\r",
+              "console.log(\"Price:\", jsonData.courses[0].products[0].price);\r",
+              "console.log(\"Stock Status:\", jsonData.courses[0].products[0].inStock);"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Rahul Sharma\",\r\n  \"courses\": []\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3030/users",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3030",
+          "path": [
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Put Request",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "const jsonData = pm.response.json();\r",
+              "\r",
+              "// Status Code\r",
+              "pm.test(\"Status code is 200\", () => {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "// Full Object Validation\r",
+              "pm.test(\"User object updated\", () => {\r",
+              "    pm.expect(jsonData.name).to.eql(\"Arpit Updated\");\r",
+              "});\r",
+              "\r",
+              "// Ensure Required Fields Exist\r",
+              "pm.test(\"Courses field exists\", () => {\r",
+              "    pm.expect(jsonData).to.have.property(\"courses\");\r",
+              "});\r",
+              "\r",
+              "// Type Validation\r",
+              "pm.test(\"Courses is array\", () => {\r",
+              "    pm.expect(jsonData.courses).to.be.an(\"array\");\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"id\": 106,\r\n  \"name\": \"Raj Sharma\",\r\n  \"courses\": []\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3030//users/101",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3030",
+          "path": [
+            "",
+            "users",
+            "101"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Request",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"User should not exist\", () => {\r",
+              "    pm.response.to.have.status(404);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3030//users/101",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3030",
+          "path": [
+            "",
+            "users",
+            "101"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
