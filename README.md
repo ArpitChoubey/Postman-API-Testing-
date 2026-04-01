@@ -1,4 +1,4 @@
-# 🚀 Postman API Testing Collection
+# 🚀  API Testing Collection Postman
 
 ## 📌 Project Overview
 
